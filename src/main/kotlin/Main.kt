@@ -1,22 +1,29 @@
 package org.example
 
-import java.util.Scanner
-
 fun main() {
-    val p1: Persona = Persona()
-    println(p1.toString())
-    p1.casament()
-    p1.aniversari()
-    println(p1.toString())
+    var darrerCercle:Cercle
 
-    val p2: Persona = Persona("Carlos", "Capó")
-    println(p2.toString())
+    do {
+        println("1. Crear un cercle d'un radi determinat i d'un color determinat")
+        println("2. Crear un cercle d'un radi determinat")
+        println("3. Mostrar l'ultim cercle creat")
+        println("4. Mostrar el perímetre de l'últim cercle creat")
+        println("5. Mostrar l'àrea de l'últim cercle creat")
+        println("6. Sortir")
 
-    val p3: Persona = Persona("Raimon", "Izard", "41752530D", 32, true)
-    println(p3.toString())
-    p3.aniversari()
-    p3.aniversari()
-    p3.aniversari()
-    p3.divorci()
-    println(p3.toString())
+        val opcioUsuari: Int = readInt("", "Tipus dades incorrecte.",
+            "Valor fora del rang esperat.",1, 6)
+
+        when(opcioUsuari) {
+            1 -> darrerCercle = crearCercleDeterminat()
+        }
+
+    } while (opcioUsuari != 6)
+}
+
+fun crearCercleDeterminat(): Cercle {
+    val radi: Float = readFloat("Introdueix el radi desitgat: ", "Tipus dades incorrecte")
+    val color: String = readWord("Introdueix el color desitgat: ", "Tipus dades incorrecte")
+
+    return Cercle(radi, color)
 }
