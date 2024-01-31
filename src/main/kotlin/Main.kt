@@ -18,8 +18,8 @@ fun main() {
             1 -> darrerCercle = crearCercleDeterminat()
             2 -> darrerCercle = crearCercle()
             3 -> println(darrerCercle)
-            4 -> println(PURPLE + "Perímetre de l'últim cercle creat: $YELLOW${roundToFloat(calcularPermimetre(darrerCercle.getRadi()), 2)}\n" + RESET)
-            5 -> println(PURPLE + "Perímetre de l'últim cercle creat: $YELLOW${roundToFloat(calcularArea(darrerCercle.getRadi()), 2)}\n" + RESET)
+            4 -> println(PURPLE + "Perímetre de l'últim cercle creat: $YELLOW${darrerCercle.getPermietre()}\n" + RESET)
+            5 -> println(PURPLE + "Perímetre de l'últim cercle creat: $YELLOW${darrerCercle.getArea()}\n" + RESET)
             6 -> println("Fins aviat!")
         }
 
@@ -39,12 +39,4 @@ fun crearCercle(): Cercle {
 
     println(BLUE + "S'ha creat un cercle amb radi $radi\n" + RESET)
     return Cercle(radi)
-}
-
-fun calcularPermimetre(radi: Float): Double {
-    return radi * (Math.PI * 2)
-}
-
-fun calcularArea(radi: Float): Double {
-    return Math.PI * (radi * radi)
 }
