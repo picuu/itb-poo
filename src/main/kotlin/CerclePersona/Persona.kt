@@ -1,4 +1,4 @@
-package org.example
+package org.example.CerclePersona
 
 class Persona {
     private var dni: String? = null

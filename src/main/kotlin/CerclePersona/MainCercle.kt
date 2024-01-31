@@ -1,7 +1,9 @@
-package org.example
+package org.example.CerclePersona
+
+import org.example.utilitats.*
 
 fun main() {
-    var darrerCercle:Cercle = Cercle(0f)
+    var darrerCercle: Cercle = Cercle(0f)
 
     do {
         println("1. Crear un cercle d'un radi determinat i d'un color determinat")

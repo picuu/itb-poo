@@ -1,4 +1,4 @@
-package org.example
+package org.example.CerclePersona
 
 fun main() {
     val p2: Persona = Persona("Carlos", "Capó")
