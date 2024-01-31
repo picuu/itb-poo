@@ -40,11 +40,14 @@ class Beguda {
     }
 
     override fun toString(): String {
-        return """
+        var str: String = """
             --------$YELLOW BEGUDA $RESET--------
             $BLUE Nom:$RESET ${this.nom}
             $BLUE Preu:$RESET ${this.preu}€
-            $BLUE És ensucrada:$RESET ${this.ensucrada}
         """.trimIndent()
+
+        if (this.ensucrada) str += "\n$BLUE La beguda té impostos per ser ensucrada.$RESET"
+
+        return str
     }
 }
