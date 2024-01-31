@@ -4,7 +4,7 @@ class Persona {
     private var dni: String? = null
     private var nom: String? = null
     private var cognoms: String? = null
-    private var edat: Int = 0
+    private var edat: Int? = null
     private var estatCivil: Boolean = false
 
     constructor(nom: String, cognoms: String){
@@ -27,8 +27,9 @@ class Persona {
     }
 
     fun aniversari(): Int {
-        this.edat++
-        return this.edat
+        if (this.edat == null) this.edat = 1
+        else this.edat = this.edat!! + 1
+        return this.edat!!
     }
 
     fun casament() {
