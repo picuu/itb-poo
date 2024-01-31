@@ -28,4 +28,13 @@ class Cercle() {
     fun getColor(): String {
         return this.color
     }
+
+    override fun toString(): String {
+        return """
+            ----- CERCLE -----
+            Radi: ${this.radi}
+            Color: ${this.color}
+            
+        """.trimIndent()
+    }
 }
