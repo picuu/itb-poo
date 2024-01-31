@@ -1,9 +1,9 @@
 package org.example
 
 class Persona() {
-    private var dni: String = "dniPersona"
-    private var nom: String = "nomPersona"
-    private var cognoms: String = "cognomsPersona"
+    private var dni: String? = null
+    private var nom: String = ""
+    private var cognoms: String = ""
     private var edat: Int = 0
     private var estatCivil: Boolean = false
 
