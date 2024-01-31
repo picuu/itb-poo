@@ -8,4 +8,16 @@ fun main() {
     println(croissant)
     println(ensaimada)
     println(donut)
+
+    println()
+
+    val aigua: Beguda = Beguda("aigua", 1f, false)
+    val cafeTallat: Beguda = Beguda("Café tallat", 1.35f, false)
+    val teVermell: Beguda = Beguda("Té vermell", 1.5f, false)
+    val cola: Beguda = Beguda("CocaCola", 1.65f, true)
+
+    println(aigua)
+    println(cafeTallat)
+    println(teVermell)
+    println(cola)
 }
