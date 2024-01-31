@@ -1,7 +1,7 @@
 package org.example
 
 fun main() {
-    var darrerCercle:Cercle = Cercle()
+    var darrerCercle:Cercle = Cercle(0f)
 
     do {
         println("1. Crear un cercle d'un radi determinat i d'un color determinat")

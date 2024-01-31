@@ -1,15 +1,14 @@
 package org.example
 
-class Cercle() {
+class Cercle {
     private var radi: Float = 0f
     private var color: String = "blanc"
 
-    constructor(radi: Float): this() {
+    constructor(radi: Float) {
         this.radi = radi
     }
 
-    constructor(radi: Float, color: String): this() {
-        this.radi = radi
+    constructor(radi: Float, color: String): this(radi) {
         this.color = color
     }
 
