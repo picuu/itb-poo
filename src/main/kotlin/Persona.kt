@@ -10,7 +10,7 @@ class Persona {
     constructor(nom: String, cognoms: String){
         this.nom = nom
         this.cognoms = cognoms
-        this.dni = calcDNI(nom, cognoms)
+        this.dni = calcDNI()
     }
 
     constructor(nom: String, cognoms: String, dni: String, edat: Int, estatCivil: Boolean): this(nom, cognoms) {
@@ -19,7 +19,7 @@ class Persona {
         this.estatCivil = estatCivil
     }
 
-    private fun calcDNI(nom: String, cognoms: String): String {
+    private fun calcDNI(): String {
         var dni:String = ""
         for (i in 1..8) dni += ('0'..'9').random()
         dni += ('A'..'Z').random()
