@@ -1,4 +1,4 @@
-package pastisseria
+package models
 
 import org.example.utilitats.*
 

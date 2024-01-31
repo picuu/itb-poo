@@ -1,4 +1,6 @@
-package org.example.CerclePersona
+package controllers
+
+import models.Persona
 
 fun main() {
     val p2: Persona = Persona("Carlos", "Capó")

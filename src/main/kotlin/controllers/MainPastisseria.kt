@@ -1,4 +1,7 @@
-package pastisseria
+package controllers
+
+import models.Beguda
+import models.Pasta
 
 fun main() {
     val croissant: Pasta = Pasta("croissant", 1.5f, 165, 210)
