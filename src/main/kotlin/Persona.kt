@@ -1,21 +1,19 @@
 package org.example
 
-class Persona() {
+class Persona {
     private var dni: String? = null
-    private var nom: String = ""
-    private var cognoms: String = ""
+    private var nom: String? = null
+    private var cognoms: String? = null
     private var edat: Int = 0
     private var estatCivil: Boolean = false
 
-    constructor(nom: String, cognoms: String): this() {
+    constructor(nom: String, cognoms: String){
         this.nom = nom
         this.cognoms = cognoms
         this.dni = calcDNI(nom, cognoms)
     }
 
-    constructor(nom: String, cognoms: String, dni: String, edat: Int, estatCivil: Boolean): this() {
-        this.nom = nom
-        this.cognoms = cognoms
+    constructor(nom: String, cognoms: String, dni: String, edat: Int, estatCivil: Boolean): this(nom, cognoms) {
         this.dni = dni
         this.edat = edat
         this.estatCivil = estatCivil
