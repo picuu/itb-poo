@@ -1,6 +1,6 @@
 package models
 
-import org.example.utilitats.*
+import utilities.*
 
 class Pasta {
     private var nom: String? = null
