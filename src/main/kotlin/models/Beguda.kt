@@ -1,8 +1,6 @@
 package models
 
-import org.example.utilitats.BLUE
-import org.example.utilitats.RESET
-import org.example.utilitats.YELLOW
+import utilities.*
 
 class Beguda {
     private var nom: String? = null
