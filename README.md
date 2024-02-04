@@ -14,23 +14,6 @@
 </a>
 </p>
 
-
-
-## 🔍 Table of Contents
-
-- [📝 Project Summary](#project-summary)
-- [💻 Activities](#activities)
-
-## 📝 Project Summary
-
-- [**.idea**](.idea): Contains configuration files for the IntelliJ IDEA IDE.
-- [**gradle**](gradle): Holds the Gradle build system configuration files.
-- [**gradle/wrapper**](gradle/wrapper): Contains the Gradle wrapper files used for building and managing the project's dependencies.
-- [**src**](src): The root source directory that holds all the project's source code.
-- [**src/main/kotlin/controllers**](src/main/kotlin/controllers): Contains the controllers to instance and execute the classes and their methods.
-- [**src/main/kotlin/models**](src/main/kotlin/models): Holds the data models and classes used in the project.
-- [**src/main/kotlin/utilities**](src/main/kotlin/utilities): Provides utility classes or functions that can be reused across the project.
-
 ## 💻 Activities
 
 - [Activity 6 - Bakery](#activity-6---bakery)
