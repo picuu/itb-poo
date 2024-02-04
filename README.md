@@ -106,11 +106,11 @@ class Electrodomestic {
 -- attributes --
 - basePrice: Float
 - color: Color
-- consumption: Char
+- consumption: Consumption
 - weight: Int
 
 -- methods --
-+ constructor(Float, Color, Char, Int)
++ constructor(Float, String, Char, Int)
 
 + getBasePrice(): Float
 + getColor(): String
@@ -119,7 +119,7 @@ class Electrodomestic {
 
 + getFinalPrice(): Float
 
-- info()
++ info()
 
 + override toString(): String
 }
@@ -129,7 +129,7 @@ class Lavadora {
 - load: Int
 
 -- methods --
-+ constructor(Float, Color, Char, Int, Int): super(Float, Color, Char, Int)
++ constructor(Float, String, Char, Int, Int): super(Float, String, Char, Int)
 
 + override getFinalPrice(): Float
 
@@ -141,11 +141,42 @@ class Televisio {
 - inches: Int
 
 -- methods --
-+ constructor(Float, Color, Char, Int, Int): super(Float, Color, Char, Int)
++ constructor(Float, String, Char, Int, Int): super(Float, String, Char, Int)
 
 + override getFinalPrice(): Float
 
 + override toString(): String
 }
+
+enum Color {
+    BLANC("Blanc"),
+    PLATEJAT("Platejat"),
+    COLOR("Color");
+
+    + printableName: String
+
+    constructor(String)
+}
+
+enum Consumption {
+    A(35),
+    B(30),
+    C(25),
+    D(20),
+    E(15),
+    F(10),
+    G(0);
+
+    + fee: Int
+
+    constructor(Int)
+}
+
+Electrodomestic <|-- Lavadora
+Electrodomestic <|-- Televisio
+
+Electrodomestic --> Color
+Electrodomestic --> Consumption
+@enduml
 @enduml
 ```
