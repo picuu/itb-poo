@@ -17,7 +17,7 @@
 ## 💻 Activities
 
 - [Activity 6 - Bakery](#activity-6---bakery)
-- [Activity 7 - Lamp](#activity-7---Lamp)
+- [Activity 7 - Lamp](#activity-7---lamp)
 - [Activity 8 - Electrodomestic](#activity-8---electrodomestic)
 
 ### Activity 6 - Bakery
@@ -93,9 +93,15 @@ class lamp {
 - [**Electrodomestic.kt**](src/main/kotlin/models/Electrodomestic.kt)
 - [**MainElectrodomestic.kt**](src/main/kotlin/controllers/MainElectrodomestic.kt)
 
+#### Helpful resources to do this activity:
+
+- [kotlin - How to overcome "same JVM signature" error when implementing a Java interface? - Stack Overflow](https://stackoverflow.com/questions/29268526/how-to-overcome-same-jvm-signature-error-when-implementing-a-java-interface)
+- [A complete guide to enum classes in Kotlin - LogRocket Blog](https://blog.logrocket.com/kotlin-enum-classes-complete-guide/)
+- [Enum classes | Kotlin Documentation](https://kotlinlang.org/docs/enum-classes.html#working-with-enum-constants)
+
 #### UML diagram
 
-![Electrodomestic UML](https://www.plantuml.com/plantuml/png/rP31IiGm48RlUOeSkzY-G4-BueBWGL3md4t6TY3DB9D9FOZlRZDhHQM2UFFIaczc_l-VsMTnB6MAnaUNixsEu8Kfq0HPqDiNqtNMYJ0UYq2sNMSwUtGPxXWzzFOGoSc2F4NYtbxLdpvJBjD9aD82HrVPC-0mIczlafYgEe6C55JoGWU4YnVYHZNRirQhqsqTsfcbRm2vNDsRtUglNFihknV6DApm8qWjQHGjF6gQoZIFiWCc5xz9By4nFL6ZxZG3CmQmGcUJJtQlvls4jsvsWTXjtowI2t-_WNuMprnEy6FJrwZRU_rwcmU8C6D6sbu7anyX_uk5zf12cU8R)
+![Electrodomestic UML](https://github.com/picuu/itb-poo/assets/93738423/d66b8911-7c59-4179-831d-8e531a935dd5)
 
 Create your own UML diagrams at [plantuml.com](https://www.plantuml.com/)
 This is the UML code for the showed diagram:
@@ -177,6 +183,5 @@ Electrodomestic <|-- Televisio
 
 Electrodomestic --> Color
 Electrodomestic --> Consumption
-@enduml
 @enduml
 ```
