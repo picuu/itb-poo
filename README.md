@@ -33,8 +33,9 @@
 
 ## 💻 Activities
 
-- [Activity 6 - Bakery](#activity-6-bakery)
-- [Activity 7 - Lamp](#activity-7-Lamp)
+- [Activity 6 - Bakery](#activity-6---bakery)
+- [Activity 7 - Lamp](#activity-7---Lamp)
+- [Activity 8 - Electrodomestic](#activity-8---electrodomestic)
 
 ### Activity 6 - Bakery
 
@@ -96,6 +97,70 @@ class lamp {
 
 - error(String)
 - info()
+
++ override toString(): String
+}
+@enduml
+```
+
+### Activity 8 - Electrodomestic
+
+#### Files of this activity:
+
+- [**Electrodomestic.kt**](src/main/kotlin/models/Electrodomestic.kt)
+- [**MainElectrodomestic.kt**](src/main/kotlin/controllers/MainElectrodomestic.kt)
+
+#### UML diagram
+
+![Electrodomestic UML](https://www.plantuml.com/plantuml/png/rP31IiGm48RlUOeSkzY-G4-BueBWGL3md4t6TY3DB9D9FOZlRZDhHQM2UFFIaczc_l-VsMTnB6MAnaUNixsEu8Kfq0HPqDiNqtNMYJ0UYq2sNMSwUtGPxXWzzFOGoSc2F4NYtbxLdpvJBjD9aD82HrVPC-0mIczlafYgEe6C55JoGWU4YnVYHZNRirQhqsqTsfcbRm2vNDsRtUglNFihknV6DApm8qWjQHGjF6gQoZIFiWCc5xz9By4nFL6ZxZG3CmQmGcUJJtQlvls4jsvsWTXjtowI2t-_WNuMprnEy6FJrwZRU_rwcmU8C6D6sbu7anyX_uk5zf12cU8R)
+
+Create your own UML diagrams at [plantuml.com](https://www.plantuml.com/)
+This is the UML code for the showed diagram:
+
+```uml
+@startuml
+class Electrodomestic {
+-- attributes --
+- basePrice: Float
+- color: Color
+- consumption: Char
+- weight: Int
+
+-- methods --
++ constructor(Float, Color, Char, Int)
+
++ getBasePrice(): Float
++ getColor(): String
++ getConsumption(): Char
++ getWeight(): Int
+
++ getFinalPrice(): Float
+
+- info()
+
++ override toString(): String
+}
+
+class Lavadora {
+-- attributes --
+- load: Int
+
+-- methods --
++ constructor(Float, Color, Char, Int, Int): super(Float, Color, Char, Int)
+
++ override getFinalPrice(): Float
+
++ override toString(): String
+}
+
+class Televisio {
+-- attributes --
+- inches: Int
+
+-- methods --
++ constructor(Float, Color, Char, Int, Int): super(Float, Color, Char, Int)
+
++ override getFinalPrice(): Float
 
 + override toString(): String
 }
