@@ -17,29 +17,36 @@ fun main() {
     var basePriceTV: Float = 0f
     var finalPriceTV: Float = 0f
 
-    for (i in 1..10) {
-        println("$RED******************** ELECTRODOMÈSTIC $i ********************$RESET")
-        val e: Electrodomestic = Electrodomestic(i*12f, colors.random(), ('A'..'G').random(), i*4)
-        e.info()
+    val electrodomestics: Array<Electrodomestic> = arrayOf(
+        Electrodomestic((70..180).random().toFloat(), colors.random(), ('A'..'G').random(), (10..80).random()),
+        Electrodomestic((70..180).random().toFloat(), colors.random(), ('A'..'G').random(), (10..80).random()),
+        Electrodomestic((70..180).random().toFloat(), colors.random(), ('A'..'G').random(), (10..80).random()),
+        Electrodomestic((70..180).random().toFloat(), colors.random(), ('A'..'G').random(), (10..80).random()),
+        Electrodomestic((70..180).random().toFloat(), colors.random(), ('A'..'G').random(), (10..80).random()),
+        Electrodomestic((70..180).random().toFloat(), colors.random(), ('A'..'G').random(), (10..80).random()),
+        Lavadora(85f, colors.random(), ('A'..'G').random(), 20, 5),
+        Lavadora(110f, colors.random(), ('A'..'G').random(), 20, 8),
+        Televisio(100f, colors.random(), ('A'..'G').random(), 10, 52),
+        Televisio(165f, colors.random(), ('A'..'G').random(), 10, 28)
+    )
 
-        basePriceGeneral += e.getBasePrice()
-        finalPriceGeneral += e.getFinalPrice()
+    for (i in electrodomestics.indices) {
+        println("$RED******************** ELECTRODOMÈSTIC ${i+1} ********************$RESET")
+        electrodomestics[i].info()
+
+        basePriceGeneral += electrodomestics[i].getBasePrice()
+        finalPriceGeneral += electrodomestics[i].getFinalPrice()
+
+        if (electrodomestics[i] is Lavadora) {
+            basePriceWashers += electrodomestics[i].getBasePrice()
+            finalPriceWashers += electrodomestics[i].getFinalPrice()
+        }
+
+        if (electrodomestics[i] is Televisio) {
+            basePriceTV += electrodomestics[i].getBasePrice()
+            finalPriceTV += electrodomestics[i].getFinalPrice()
+        }
     }
-
-    val l1: Lavadora = Lavadora(85f, colors.random(), ('A'..'G').random(), 20, 5)
-    val l2: Lavadora = Lavadora(110f, colors.random(), ('A'..'G').random(), 20, 8)
-    basePriceGeneral += l1.getBasePrice() + l2.getBasePrice()
-    finalPriceGeneral += l1.getFinalPrice() + l2.getFinalPrice()
-    basePriceWashers += l1.getBasePrice() + l2.getBasePrice()
-    finalPriceWashers += l1.getFinalPrice() + l2.getFinalPrice()
-
-
-    val tv1: Televisio = Televisio(100f, colors.random(), ('A'..'G').random(), 10, 52)
-    val tv2: Televisio = Televisio(165f, colors.random(), ('A'..'G').random(), 10, 28)
-    basePriceGeneral += tv1.getBasePrice() + tv2.getBasePrice()
-    finalPriceGeneral += tv1.getFinalPrice() + tv2.getFinalPrice()
-    basePriceTV += tv1.getBasePrice() + tv2.getBasePrice()
-    finalPriceTV += tv1.getFinalPrice() + tv2.getFinalPrice()
 
     println("$RED******************** Electrodomèstics ********************$RESET")
     println("Preu base general: $basePriceGeneral")
