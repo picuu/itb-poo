@@ -31,7 +31,7 @@ open class Electrodomestic {
      * @return Float of the initial price of the "Electrodomèstic".
      */
     fun getBasePrice(): Float {
-        return basePrice
+        return this.basePrice
     }
 
     /**
@@ -117,6 +117,10 @@ class Lavadora: Electrodomestic {
         this.load = load
     }
 
+    fun getLoad(): Int {
+        return this.load
+    }
+
     override fun getFinalPrice(): Float {
         val loadFee: Int
 
@@ -144,6 +148,10 @@ class Televisio: Electrodomestic {
 
     constructor(basePrice: Float, color: String, consumption: Char, weight: Int, inches: Int): super(basePrice, color, consumption, weight) {
         this.inches = inches
+    }
+
+    fun getInches(): Int {
+        return this.inches
     }
 
     override fun getFinalPrice(): Float {
