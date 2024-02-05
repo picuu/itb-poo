@@ -15,6 +15,7 @@ class Televisio: Electrodomestic {
     }
 
     override fun getFinalPrice(): Float {
+        val basePrice: Float = super.getFinalPrice()
         val inchesFee: Int
 
         when (this.inches) {
@@ -25,7 +26,7 @@ class Televisio: Electrodomestic {
             else -> inchesFee = 200
         }
 
-        return this.basePrice + inchesFee
+        return basePrice + this.basePrice + inchesFee
     }
 
     override fun toString(): String {
