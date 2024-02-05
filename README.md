@@ -46,7 +46,7 @@
 Create your own UML diagrams at [plantuml.com](https://www.plantuml.com/)
 This is the UML code for the showed diagram: 
 
-```uml
+```puml
 @startuml
 class lamp {
 -- attributes --
@@ -105,87 +105,100 @@ class lamp {
 
 #### UML diagram
 
-![Electrodomestic UML](https://github.com/picuu/itb-poo/assets/93738423/d66b8911-7c59-4179-831d-8e531a935dd5)
+![Electrodomestic UML](https://github.com/picuu/itb-poo/assets/93738423/1a1b6207-0456-459b-b08d-91d5e0559fdf)
 
 Create your own UML diagrams at [plantuml.com](https://www.plantuml.com/)
 This is the UML code for the showed diagram:
 
-```uml
+```puml
 @startuml
 class Electrodomestic {
--- attributes --
-- basePrice: Float
-- color: Color
-- consumption: Consumption
-- weight: Int
+  == attributes ==
+  # basePrice: Float
+  # color: Color
+  # consumption: Consumption
+  # weight: Int
 
--- methods --
-+ constructor(Float, String, Char, Int)
+  == methods ==
+  + constructor(Float, String, Char, Int)
 
-+ getBasePrice(): Float
-+ getColor(): String
-+ getConsumption(): Char
-+ getWeight(): Int
+  .. getters ..
+  + getBasePrice(): Float
+  + getColor(): String
+  + getConsumption(): Char
+  + getWeight(): Int
 
-+ getFinalPrice(): Float
+  ..
 
-+ info()
+  + getFinalPrice(): Float
 
-+ override toString(): String
+  + info()
+
+  + override toString(): String
 }
 
 class Lavadora {
--- attributes --
-- load: Int
+  == attributes ==
+  - load: Int
 
--- methods --
-+ constructor(Float, String, Char, Int, Int): super(Float, String, Char, Int)
+   == methods ==
+  + constructor(Float, String, Char, Int, Int): super(Float, String, Char, Int)
 
-+ override getFinalPrice(): Float
+  .. getters ..
+  + getLoad(): Int
 
-+ override toString(): String
+  ..
+
+  + override getFinalPrice(): Float
+
+  + override toString(): String
 }
 
 class Televisio {
--- attributes --
-- inches: Int
+  == attributes ==
+  - inches: Int
 
--- methods --
-+ constructor(Float, String, Char, Int, Int): super(Float, String, Char, Int)
+  == methods ==
+  + constructor(Float, String, Char, Int, Int): super(Float, String, Char, Int)
 
-+ override getFinalPrice(): Float
+  .. getters ..
+  + getInches(): Int
 
-+ override toString(): String
+  ..
+
+  + override getFinalPrice(): Float
+
+  + override toString(): String
 }
 
 enum Color {
-    BLANC("Blanc"),
-    PLATEJAT("Platejat"),
-    COLOR("Color");
+  BLANC("Blanc"),
+  PLATEJAT("Platejat"),
+  COLOR("Color");
 
-    + printableName: String
+  + printableName: String
 
-    constructor(String)
+  constructor(String)
 }
 
 enum Consumption {
-    A(35),
-    B(30),
-    C(25),
-    D(20),
-    E(15),
-    F(10),
-    G(0);
+  A(35),
+  B(30),
+  C(25),
+  D(20),
+  E(15),
+  F(10),
+  G(0);
 
-    + fee: Int
+  + fee: Int
 
-    constructor(Int)
+  constructor(Int)
 }
 
 Electrodomestic <|-- Lavadora
 Electrodomestic <|-- Televisio
 
-Electrodomestic --> Color
-Electrodomestic --> Consumption
+Electrodomestic --* Color
+Electrodomestic --* Consumption
 @enduml
 ```
