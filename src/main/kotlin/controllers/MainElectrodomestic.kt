@@ -1,8 +1,8 @@
 package controllers
 
-import models.Electrodomestic
-import models.Lavadora
-import models.Televisio
+import models.electrodomestic.Electrodomestic
+import models.electrodomestic.Lavadora
+import models.electrodomestic.Televisio
 import utilities.*
 
 fun main() {
