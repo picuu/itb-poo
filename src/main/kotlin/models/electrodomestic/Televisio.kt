@@ -30,7 +30,13 @@ class Televisio: Electrodomestic {
 
     override fun toString(): String {
         val header: String = "---------------$YELLOW TELEVISIÓ$RESET ---------------"
-        val body: String = "\t- Prue base: ${this.basePrice}€\n\t- Color: ${getColor()}\n\t- Consúm: ${this.consumption.name}\n\t- Pes: ${this.weight}kg\n\t- Mida: ${this.inches}\"\n\t- Preu final: ${getFinalPrice()}€"
+        var body: String
+        body = "\t- Prue base: ${this.basePrice}€\n"
+        body += "\t- Color: ${getColor()}\n"
+        body += "\t- Consúm: ${this.consumption.name}\n"
+        body += "\t- Pes: ${this.weight}kg\n"
+        body += "\t- Mida: ${this.inches}\"\n"
+        body += "\t- Preu final: ${getFinalPrice()}€"
 
         return header + "\n" + body
     }

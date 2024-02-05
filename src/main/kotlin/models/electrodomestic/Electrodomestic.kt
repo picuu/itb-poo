@@ -100,11 +100,15 @@ open class Electrodomestic {
      * @author picuu
      * @since 01/02/2024
      * @return String with the information of the "Electrodomestic".
-     * @see getColor
      */
     override fun toString(): String {
         val header: String = "---------------$YELLOW ELECTRODOMÈSTIC$RESET ---------------"
-        val body: String = "\t- Prue base: ${this.basePrice}€\n\t- Color: ${getColor()}\n\t- Consúm: ${this.consumption.name}\n\t- Pes: ${this.weight}kg\n\t- Preu final: ${getFinalPrice()}€"
+        var body: String
+        body = "\t- Prue base: ${this.basePrice}€\n"
+        body += "\t- Color: ${this.color.printableName}\n"
+        body += "\t- Consúm: ${this.consumption.name}\n"
+        body += "\t- Pes: ${this.weight}kg\n"
+        body += "\t- Preu final: ${getFinalPrice()}€"
 
         return header + "\n" + body
     }
