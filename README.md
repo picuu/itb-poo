@@ -90,7 +90,11 @@ class lamp {
 
 #### Files of this activity:
 
-- [**Electrodomestic.kt**](src/main/kotlin/models/Electrodomestic.kt)
+- [**Electrodomestic.kt**](src/main/kotlin/models/electrodomestic/Electrodomestic.kt)
+- [**Lavadora.kt**](src/main/kotlin/models/electrodomestic/Lavadora.kt)
+- [**Televisio.kt**](src/main/kotlin/models/electrodomestic/Televisio.kt)
+- [**Color.kt**](src/main/kotlin/models/electrodomestic/Color.kt)
+- [**Consumption.kt**](src/main/kotlin/models/electrodomestic/Consumption.kt)
 - [**MainElectrodomestic.kt**](src/main/kotlin/controllers/MainElectrodomestic.kt)
 
 #### Helpful resources to do this activity:
