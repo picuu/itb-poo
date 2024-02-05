@@ -105,7 +105,7 @@ class lamp {
 
 #### UML diagram
 
-![Electrodomestic UML](https://github.com/picuu/itb-poo/assets/93738423/1a1b6207-0456-459b-b08d-91d5e0559fdf)
+![Electrodomestic UML](https://github.com/picuu/itb-poo/assets/93738423/89e02f2e-7214-4688-bdf5-2dff3ddd2950)
 
 Create your own UML diagrams at [plantuml.com](https://www.plantuml.com/)
 This is the UML code for the showed diagram:
@@ -198,7 +198,7 @@ enum Consumption {
 Electrodomestic <|-- Lavadora
 Electrodomestic <|-- Televisio
 
-Electrodomestic --* Color
-Electrodomestic --* Consumption
+Electrodomestic *-- Color
+Electrodomestic *-- Consumption
 @enduml
 ```
